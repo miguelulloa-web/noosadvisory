@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>noosadvisory | Consultoría & Automatización con Inteligencia Artificial</title>
+  <meta name="description" content="Transformamos la productividad de empresas y pymes en Chile mediante automatización inteligente, agentes de IA, integración de flujos y analítica estratégica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B0F19;
+      --bg-card: rgba(18, 24, 40, 0.75);
+      --bg-card-hover: rgba(28, 37, 61, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(99, 102, 241, 0.4);
+      --accent-primary: #6366F1;
+      --accent-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+      --text-main: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --text-soft: #D1D5DB;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+    .glow-blob-1 { position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 450px; background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(11, 15, 25, 0) 70%); pointer-events: none; z-index: 0; }
+    .glow-blob-2 { position: absolute; top: 1200px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(11, 15, 25, 0) 70%); pointer-events: none; z-index: 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    header { padding: 24px 0; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; background-color: rgba(11, 15, 25, 0.8); }
+    .nav-wrapper { display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .brand-logo span { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .brand-badge { font-size: 0.7rem; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #A5B4FC; letter-spacing: 0.8px; }
+    nav ul { display: flex; list-style: none; gap: 32px; align-items: center; }
+    nav a { color: var(--text-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: #fff; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 26px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.25s ease; border: none; }
+    .btn-primary { background: var(--accent-gradient); color: #fff; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99, 102, 241, 0.55); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.05); color: #fff; border: 1px solid var(--border-color); }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
+    .hero { padding: 100px 0 80px; text-align: center; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.25); color: #C7D2FE; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; }
+    .hero-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; }
+    .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -1.5px; max-width: 900px; margin: 0 auto 24px; }
+    .hero h1 span.gradient-text { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 36px; font-weight: 400; }
+    .hero-actions { display: flex; gap: 16px; justify-content: center; margin-bottom: 50px; }
+    .metrics-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 30px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; margin-top: 40px; backdrop-filter: blur(16px); }
+    .metric-item h4 { font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+    .metric-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+    section { padding: 90px 0; }
+    .section-header { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+    .section-header .sub-badge { color: #818CF8; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 12px; display: block; }
+    .section-header h2 { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 16px; }
+    .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; transition: all 0.3s ease; position: relative; display: flex; flex-direction: column; }
+    .card:hover { background: var(--bg-card-hover); border-color: var(--border-glow); transform: translateY(-4px); }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 24px; color: #818CF8; }
+    .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 20px; flex-grow: 1; }
+    .card-features { list-style: none; padding-top: 16px; border-top: 1px solid var(--border-color); }
+    .card-features li { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .card-features li::before { content: "✓"; color: #10B981; font-weight: bold; }
+    .comparison-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .comp-card { border-radius: 16px; padding: 36px; }
+    .comp-card.without { background: rgba(239, 68, 68, 0.04); border: 1px solid rgba(239, 68, 68, 0.18); }
+    .comp-card.with { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); }
+    .comp-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .comp-list { list-style: none; }
+    .comp-list li { margin-bottom: 14px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; }
+    .without .comp-list li { color: #FCA5A5; }
+    .with .comp-list li { color: #E0E7FF; }
+    .steps-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .step-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 28px; position: relative; }
+    .step-num { font-size: 2.5rem; font-weight: 800; color: rgba(255, 255, 255, 0.12); line-height: 1; margin-bottom: 16px; }
+    .step-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: #fff; }
+    .step-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+    .cta-box { background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 20px; padding: 60px 40px; text-align: center; backdrop-filter: blur(16px); }
+    .cta-box h2 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 16px; }
+    .cta-box p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
+    footer { border-top: 1px solid var(--border-color); padding: 40px 0; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.5rem; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .metrics-bar { grid-template-columns: 1fr 1fr; }
+      .steps-container { grid-template-columns: 1fr 1fr; }
+      .comparison-wrapper { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-blob-1"></div>
+  <div class="glow-blob-2"></div>
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">noos<span>advisory</span><span class="brand-badge">IA Enterprise</span></a>
+      <nav>
+        <ul>
+          <li><a href="#soluciones">Soluciones</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#beneficios">Impacto</a></li>
+          <li><a href="#contacto" class="btn btn-primary">Agendar Diagnóstico</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag"><span class="dot"></span> Consultoría & Automatización Operativa con IA</div>
+      <h1>Optimizamos la operación de tu empresa con <span class="gradient-text">Inteligencia Artificial</span></h1>
+      <p>Diseñamos e implementamos agentes autónomos, flujos con n8n y arquitecturas de decisión para reducir fricción operativa, eliminar tareas repetitivas y acelerar tus ventas.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Diagnóstico Inicial Gratuito</a>
+        <a href="#soluciones" class="btn btn-secondary">Explorar Soluciones</a>
+      </div>
+      <div class="metrics-bar">
+        <div class="metric-item"><h4>24/7</h4><p>Operación continua y respuestas inmediatas</p></div>
+        <div class="metric-item"><h4>-65%</h4><p>Tiempo en procesamiento documental</p></div>
+        <div class="metric-item"><h4>+20h</h4><p>Ahorro semanal promedio por colaborador</p></div>
+        <div class="metric-item"><h4>100%</h4><p>Integración con tu stack actual (CRM/ERP)</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="soluciones">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-badge">Nuestras Capacidades</span>
+        <h2>Soluciones de IA diseñadas para impacto real</h2>
+        <p>No creamos demos decorativas. Construimos sistemas robustos que mueven la aguja en tus procesos de negocio.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Flujos y Automatizaciones</h3>
+          <p>Orquestación inteligente de procesos conectando CRM, ERP, WhatsApp, hojas de cálculo y correos con n8n y modelos LLM.</p>
+          <ul class="card-features">
+            <li>Actualización automática de CRM</li>
+            <li>Generación de reportes y KPIs</li>
+            <li>Sincronización multi-plataforma</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤖</div>
+          <h3>Agentes Autónomos & RAG</h3>
+          <p>Agentes contextuales entrenados con los manuales, procedimientos y base de datos de tu empresa para responder con precisión quirúrgica.</p>
+          <ul class="card-features">
+            <li>Sistemas RAG con datos privados</li>
+            <li>Atención y calificación de prospectos</li>
+            <li>Derivación fluida a ejecutivos humanos</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>Procesamiento Documental</h3>
+          <p>Extracción, validación y conciliación de facturas, contratos, DTEs y solicitudes sin intervención manual propensa a errores.</p>
+          <ul class="card-features">
+            <li>OCR inteligente y estructuración JSON</li>
+            <li>Conciliación automática con ERP</li>
+            <li>Validación y auditoría de reglas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="beneficios">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-badge">Transformación Operativa</span>
+        <h2>La diferencia de operar con noosadvisory</h2>
+        <p>Evoluciona desde procesos fragmentados hacia una arquitectura ágil y basada en datos.</p>
+      </div>
+      <div class="comparison-wrapper">
+        <div class="comp-card without">
+          <div class="comp-title">❌ Operación Tradicional</div>
+          <ul class="comp-list">
+            <li>• Carga manual y doble digitación entre sistemas no integrados.</li>
+            <li>• Prospectos y oportunidades que se enfrían por demoras en respuesta.</li>
+            <li>• Decisiones comerciales basadas en intuición y planillas desactualizadas.</li>
+            <li>• Equipos clave consumidos en tareas administrativas repetitivas.</li>
+          </ul>
+        </div>
+        <div class="comp-card with">
+          <div class="comp-title">✅ Con noosadvisory</div>
+          <ul class="comp-list">
+            <li>• Flujos orquestados y sincronizados de extremo a extremo en tiempo real.</li>
+            <li>• Calificación y atención instantánea 24/7 con agentes contextuales.</li>
+            <li>• Dashboards automatizados y visibilidad completa del rendimiento.</li>
+            <li>• Equipos enfocados en estrategia, clientes y generación de valor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="metodologia">
+    <div class="container">
+      <div class="section-header">
+        <span class="sub-badge">Ruta de Implementación</span>
+        <h2>Metodología clara y medible</h2>
+        <p>Un enfoque ágil por fases para asegurar retorno y adopción desde el primer mes.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h4>Diagnóstico</h4>
+          <p>Mapeamos tus procesos actuales, identificamos cuellos de botella y priorizamos casos de uso de alto impacto.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h4>Diseño & PoC</h4>
+          <p>Estructuramos la arquitectura de datos, flujos de integración y validamos un prototipo funcional rápido.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h4>Despliegue</h4>
+          <p>Implementación en producción con seguridad empresarial, monitoreo continuo y pruebas rigurosas.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h4>Escalamiento</h4>
+          <p>Capacitación del equipo, soporte continuo y optimización evolutiva de los modelos y flujos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacto">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Impulsa la productividad de tu negocio hoy</h2>
+        <p>Conversemos sobre tus desafíos operativos y descubre cómo la inteligencia artificial puede transformar tu flujo de trabajo.</p>
+        <a href="mailto:contacto@noosadvisory.com" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Solicitar Diagnóstico Estratégico</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>© 2026 noosadvisory. Todos los derechos reservados. Consultoría y Automatización de Procesos con IA.</p>
+    </div>
+  </footer>
+</body>
+</html>
