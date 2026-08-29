@@ -1,0 +1,56 @@
+aagm_version: "1.9"
+items:
+  - id: TP-01
+    title: "Visual Foundation & Design System"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: []
+  - id: TP-02
+    title: "Header, Hero Section & What We Do Core Blocks"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-01]
+  - id: TP-03
+    title: "Modular Featured Work & AAGm Case Showcase"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-01]
+  - id: TP-04
+    title: "Our Approach Interactive Process & Capabilities Grid"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-02, TP-03]
+  - id: TP-05
+    title: "About NoosAdvisory, Executive Contact/CTA & Navigation"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-04]
+  - id: TP-07
+    title: "Design & UX Polish (Lovable Benchmark Exploration)"
+    owner: SOLUTION_ARCHITECT
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-05]
+  - id: TP-08
+    title: "Execution of NoosAdvisory Visual Design System v1.0"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-07]
+  - id: TP-09
+    title: "Final Visual & Editorial Harmonization (Hero PNG & Brand System v1.0)"
+    owner: DEVELOPER
+    phase: DELIVERY
+    status: DONE
+    dependencies: [TP-08]
+  - id: TP-06
+    title: "End-to-End QA, Cross-Device Polish & Release Gate"
+    owner: QA
+    phase: RELEASE
+    status: DONE
+    dependencies: [TP-09]

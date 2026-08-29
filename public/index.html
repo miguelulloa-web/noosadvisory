@@ -3,241 +3,874 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>noosadvisory | Consultoría & Automatización con Inteligencia Artificial</title>
-  <meta name="description" content="Transformamos la productividad de empresas y pymes en Chile mediante automatización inteligente, agentes de IA, integración de flujos y analítica estratégica.">
+  <title>NoosAdvisory · Negocio, Tecnología, Inteligencia Artificial & Ejecución</title>
+  <meta name="description" content="NoosAdvisory transforma necesidades y oportunidades de negocio en soluciones reales con Inteligencia Artificial, agentes autónomos, automatización y metodología ágil demostrable.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NoosAdvisory · Negocio, Tecnología, Inteligencia Artificial & Ejecución">
+  <meta property="og:description" content="Transformamos oportunidades de IA en resultados reales. Consultoría ejecutiva, agentes autónomos y metodología trazable.">
+  <meta property="og:url" content="https://noosadvisory.web.app">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Fonts: Inter (Single Typographic Family) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-main: #0B0F19;
-      --bg-card: rgba(18, 24, 40, 0.75);
-      --bg-card-hover: rgba(28, 37, 61, 0.85);
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(99, 102, 241, 0.4);
-      --accent-primary: #6366F1;
-      --accent-gradient: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
-      --text-main: #F9FAFB;
-      --text-muted: #9CA3AF;
-      --text-soft: #D1D5DB;
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css?v=1.3">
+
+  <!-- Structured Data: Schema.org (SEO & AI Discoverability) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NoosAdvisory",
+    "description": "Firma de consultoría ejecutiva, inteligencia artificial aplicada, agentes autónomos y ejecución tecnológica.",
+    "url": "https://noosadvisory.web.app",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressCountry": "CL"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence Strategy",
+      "Autonomous AI Agents",
+      "Workflow Automation",
+      "AI-Assisted Software Development",
+      "Enterprise AI Governance",
+      "AAGm Methodology"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contacto@noosadvisory.com",
+      "contactType": "customer service"
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-    .glow-blob-1 { position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 450px; background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(11, 15, 25, 0) 70%); pointer-events: none; z-index: 0; }
-    .glow-blob-2 { position: absolute; top: 1200px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(11, 15, 25, 0) 70%); pointer-events: none; z-index: 0; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-    header { padding: 24px 0; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; background-color: rgba(11, 15, 25, 0.8); }
-    .nav-wrapper { display: flex; align-items: center; justify-content: space-between; }
-    .brand-logo { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; display: flex; align-items: center; gap: 8px; text-decoration: none; }
-    .brand-logo span { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .brand-badge { font-size: 0.7rem; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #A5B4FC; letter-spacing: 0.8px; }
-    nav ul { display: flex; list-style: none; gap: 32px; align-items: center; }
-    nav a { color: var(--text-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
-    nav a:hover { color: #fff; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 26px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.25s ease; border: none; }
-    .btn-primary { background: var(--accent-gradient); color: #fff; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35); }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(99, 102, 241, 0.55); }
-    .btn-secondary { background: rgba(255, 255, 255, 0.05); color: #fff; border: 1px solid var(--border-color); }
-    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); }
-    .hero { padding: 100px 0 80px; text-align: center; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.25); color: #C7D2FE; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; }
-    .hero-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; }
-    .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.15; letter-spacing: -1.5px; max-width: 900px; margin: 0 auto 24px; }
-    .hero h1 span.gradient-text { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 36px; font-weight: 400; }
-    .hero-actions { display: flex; gap: 16px; justify-content: center; margin-bottom: 50px; }
-    .metrics-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 30px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; margin-top: 40px; backdrop-filter: blur(16px); }
-    .metric-item h4 { font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
-    .metric-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
-    section { padding: 90px 0; }
-    .section-header { text-align: center; max-width: 650px; margin: 0 auto 60px; }
-    .section-header .sub-badge { color: #818CF8; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 12px; display: block; }
-    .section-header h2 { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 16px; }
-    .section-header p { color: var(--text-muted); font-size: 1.05rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; transition: all 0.3s ease; position: relative; display: flex; flex-direction: column; }
-    .card:hover { background: var(--bg-card-hover); border-color: var(--border-glow); transform: translateY(-4px); }
-    .card-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 24px; color: #818CF8; }
-    .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
-    .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 20px; flex-grow: 1; }
-    .card-features { list-style: none; padding-top: 16px; border-top: 1px solid var(--border-color); }
-    .card-features li { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-    .card-features li::before { content: "✓"; color: #10B981; font-weight: bold; }
-    .comparison-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .comp-card { border-radius: 16px; padding: 36px; }
-    .comp-card.without { background: rgba(239, 68, 68, 0.04); border: 1px solid rgba(239, 68, 68, 0.18); }
-    .comp-card.with { background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.3); }
-    .comp-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .comp-list { list-style: none; }
-    .comp-list li { margin-bottom: 14px; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 10px; }
-    .without .comp-list li { color: #FCA5A5; }
-    .with .comp-list li { color: #E0E7FF; }
-    .steps-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .step-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 28px; position: relative; }
-    .step-num { font-size: 2.5rem; font-weight: 800; color: rgba(255, 255, 255, 0.12); line-height: 1; margin-bottom: 16px; }
-    .step-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: #fff; }
-    .step-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
-    .cta-box { background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 20px; padding: 60px 40px; text-align: center; backdrop-filter: blur(16px); }
-    .cta-box h2 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 16px; }
-    .cta-box p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; }
-    footer { border-top: 1px solid var(--border-color); padding: 40px 0; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
-    @media (max-width: 900px) {
-      .hero h1 { font-size: 2.5rem; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .metrics-bar { grid-template-columns: 1fr 1fr; }
-      .steps-container { grid-template-columns: 1fr 1fr; }
-      .comparison-wrapper { grid-template-columns: 1fr; }
-      nav ul { display: none; }
-    }
-  </style>
+  }
+  </script>
 </head>
 <body>
-  <div class="glow-blob-1"></div>
-  <div class="glow-blob-2"></div>
+
+  <!-- Header / Navigation -->
   <header>
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo">noos<span>advisory</span><span class="brand-badge">IA Enterprise</span></a>
-      <nav>
-        <ul>
-          <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#metodologia">Metodología</a></li>
-          <li><a href="#beneficios">Impacto</a></li>
-          <li><a href="#contacto" class="btn btn-primary">Agendar Diagnóstico</a></li>
+      <a href="#" class="brand-logo-wrap" aria-label="NoosAdvisory Inicio">
+        <span class="brand-logo">NOOS<span class="brand-accent">ADVISORY</span></span>
+        <span class="brand-tagline">Executive Intelligence. Real Results.</span>
+      </a>
+      
+      <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Abrir Menú de Navegación" aria-expanded="false">
+        <svg class="icon-svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      
+      <nav aria-label="Navegación Principal">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#que-hacemos">Qué Hacemos</a></li>
+          <li><a href="#portafolio">Portafolio (AAGm)</a></li>
+          <li><a href="#enfoque">Metodología</a></li>
+          <li><a href="#capacidades">Capacidades</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto" class="btn btn-primary btn-sm">Hablemos →</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <section class="hero">
-    <div class="container">
-      <div class="hero-tag"><span class="dot"></span> Consultoría & Automatización Operativa con IA</div>
-      <h1>Optimizamos la operación de tu empresa con <span class="gradient-text">Inteligencia Artificial</span></h1>
-      <p>Diseñamos e implementamos agentes autónomos, flujos con n8n y arquitecturas de decisión para reducir fricción operativa, eliminar tareas repetitivas y acelerar tus ventas.</p>
-      <div class="hero-actions">
-        <a href="#contacto" class="btn btn-primary">Diagnóstico Inicial Gratuito</a>
-        <a href="#soluciones" class="btn btn-secondary">Explorar Soluciones</a>
-      </div>
-      <div class="metrics-bar">
-        <div class="metric-item"><h4>24/7</h4><p>Operación continua y respuestas inmediatas</p></div>
-        <div class="metric-item"><h4>-65%</h4><p>Tiempo en procesamiento documental</p></div>
-        <div class="metric-item"><h4>+20h</h4><p>Ahorro semanal promedio por colaborador</p></div>
-        <div class="metric-item"><h4>100%</h4><p>Integración con tu stack actual (CRM/ERP)</p></div>
-      </div>
-    </div>
-  </section>
-  <section id="soluciones">
-    <div class="container">
-      <div class="section-header">
-        <span class="sub-badge">Nuestras Capacidades</span>
-        <h2>Soluciones de IA diseñadas para impacto real</h2>
-        <p>No creamos demos decorativas. Construimos sistemas robustos que mueven la aguja en tus procesos de negocio.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Flujos y Automatizaciones</h3>
-          <p>Orquestación inteligente de procesos conectando CRM, ERP, WhatsApp, hojas de cálculo y correos con n8n y modelos LLM.</p>
-          <ul class="card-features">
-            <li>Actualización automática de CRM</li>
-            <li>Generación de reportes y KPIs</li>
-            <li>Sincronización multi-plataforma</li>
-          </ul>
+
+  <main>
+    <!-- Hero Section (Canonical 45/55 PNG Harmonization & Ambient Network Layer) -->
+    <section class="hero" id="hero">
+      <!-- High-Fidelity Ambient Network Layer (Hero PNG Reference) - Strictly Absolute Background -->
+      <svg class="hero-ambient-network" aria-hidden="true" style="position: absolute; inset: 0; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; display: block;" viewBox="0 0 1440 760" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="net-teal-bright" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00A896" stop-opacity="0.15" />
+            <stop offset="45%" stop-color="#00A896" stop-opacity="0.75" />
+            <stop offset="100%" stop-color="#185ADB" stop-opacity="0.5" />
+          </linearGradient>
+          <linearGradient id="net-blue-fade" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#185ADB" stop-opacity="0.1" />
+            <stop offset="50%" stop-color="#185ADB" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#00A896" stop-opacity="0.2" />
+          </linearGradient>
+          <linearGradient id="net-teal-fade" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00A896" stop-opacity="0.1" />
+            <stop offset="40%" stop-color="#00A896" stop-opacity="0.5" />
+            <stop offset="85%" stop-color="#185ADB" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#00A896" stop-opacity="0.1" />
+          </linearGradient>
+          <linearGradient id="hero-bottom-wave-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00A896" stop-opacity="0.18" />
+            <stop offset="50%" stop-color="#185ADB" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#00A896" stop-opacity="0.02" />
+          </linearGradient>
+          <radialGradient id="node-teal-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#00A896" stop-opacity="0.4" />
+            <stop offset="60%" stop-color="#00A896" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#00A896" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="node-blue-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#185ADB" stop-opacity="0.35" />
+            <stop offset="60%" stop-color="#185ADB" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#185ADB" stop-opacity="0" />
+          </radialGradient>
+          
+          <!-- Gradual Horizontal Opacity Mask: 100% Clean on Left (H1 Area), Ramps up smoothly towards AAGm Card on Right -->
+          <mask id="hero-net-fade-mask">
+            <linearGradient id="mask-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#000000" stop-opacity="1" />
+              <stop offset="42%" stop-color="#000000" stop-opacity="1" />
+              <stop offset="58%" stop-color="#FFFFFF" stop-opacity="0.65" />
+              <stop offset="75%" stop-color="#FFFFFF" stop-opacity="1" />
+              <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
+            </linearGradient>
+            <rect x="0" y="0" width="1440" height="760" fill="url(#mask-grad)" />
+          </mask>
+        </defs>
+
+        <!-- Bottom-Right Wave / Gradient Fluid Mass (matches PNG bottom right) -->
+        <path d="M 800 760 C 940 630, 1140 565, 1340 585 C 1400 592, 1430 600, 1440 605 L 1440 760 Z" fill="url(#hero-bottom-wave-grad)" />
+        <path d="M 880 760 C 990 670, 1160 620, 1360 635 L 1440 655 L 1440 760 Z" fill="#00A896" fill-opacity="0.04" />
+
+        <!-- Bottom-Right Flowing Network Curves -->
+        <path d="M 740 760 C 870 665, 1070 585, 1310 595 C 1375 598, 1415 605, 1440 612" stroke="#00A896" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
+        <path d="M 820 760 C 930 685, 1110 625, 1350 635 C 1395 638, 1425 645, 1440 650" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.4" stroke-linecap="round"/>
+        <path d="M 910 760 C 1030 705, 1180 665, 1400 675 C 1420 676, 1432 680, 1440 685" stroke="#00A896" stroke-width="1" stroke-opacity="0.3" stroke-linecap="round"/>
+        
+        <!-- Bottom-Right Nodes -->
+        <circle cx="1080" cy="620" r="3.5" fill="#00A896" fill-opacity="0.85"/>
+        <circle cx="1210" cy="590" r="10" fill="url(#node-blue-halo)"/>
+        <circle cx="1210" cy="590" r="4.5" fill="#185ADB" fill-opacity="0.9"/>
+        <circle cx="1330" cy="630" r="3" fill="#00A896" fill-opacity="0.8"/>
+        <line x1="1080" y1="620" x2="1210" y2="590" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+        <line x1="1210" y1="590" x2="1330" y2="630" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+
+        <!-- Upper-Right Network with Mask (Concentrated from Center to Right, 100% Clean H1 Area) -->
+        <g mask="url(#hero-net-fade-mask)">
+          <!-- Line 1: Upper dominant teal ribbon -->
+          <path d="M 680 72 C 810 42, 940 90, 1070 58 C 1190 30, 1310 48, 1440 76" stroke="url(#net-teal-bright)" stroke-width="1.8" stroke-opacity="0.75" stroke-linecap="round"/>
+          
+          <!-- Line 2: Intertwining Blue curve -->
+          <path d="M 640 115 C 780 95, 900 170, 1060 112 C 1180 72, 1300 108, 1440 138" stroke="url(#net-blue-fade)" stroke-width="1.4" stroke-opacity="0.6" stroke-linecap="round"/>
+          
+          <!-- Line 3: Sweeping curve dipping near card top -->
+          <path d="M 620 152 C 760 140, 860 220, 1010 158 C 1150 108, 1280 158, 1440 192" stroke="url(#net-teal-fade)" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round"/>
+          
+          <!-- Line 4: High arc going to upper right edge -->
+          <path d="M 740 30 C 870 12, 1010 38, 1160 18 C 1280 2, 1370 18, 1440 36" stroke="#185ADB" stroke-width="1.1" stroke-opacity="0.4" stroke-linecap="round"/>
+          
+          <!-- Line 5: Delicate inner contour curve -->
+          <path d="M 660 135 C 790 125, 930 130, 1080 82 C 1210 46, 1340 72, 1440 92" stroke="#00A896" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+          
+          <!-- Line 6: Branching curve heading down right flank -->
+          <path d="M 1060 112 C 1140 148, 1220 218, 1340 258 C 1390 272, 1420 278, 1440 282" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.45" stroke-linecap="round"/>
+          
+          <!-- Line 7: Lower branching curve behind card right shoulder -->
+          <path d="M 1010 158 C 1100 208, 1180 278, 1300 318 C 1360 338, 1410 342, 1440 348" stroke="#00A896" stroke-width="1.1" stroke-opacity="0.38" stroke-linecap="round"/>
+          
+          <!-- Line 8: Cross connecting diagonal arc -->
+          <path d="M 880 78 C 970 114, 1070 178, 1190 148 C 1300 118, 1380 158, 1440 168" stroke="#00A896" stroke-width="0.95" stroke-opacity="0.4" stroke-linecap="round"/>
+
+          <!-- Upper-Right Network Nodes (Matching PNG Exact Placement & Visual Hierarchy) -->
+          <!-- Node A: Large Featured Teal Node with Halo (Key Focal Node in PNG) -->
+          <circle cx="1060" cy="112" r="14" fill="url(#node-teal-halo)"/>
+          <circle cx="1060" cy="112" r="5" fill="#00A896"/>
+          <circle cx="1060" cy="112" r="2" fill="#FFFFFF"/>
+
+          <!-- Node B: Featured Blue Node (Upper Right) -->
+          <circle cx="1180" cy="72" r="11" fill="url(#node-blue-halo)"/>
+          <circle cx="1180" cy="72" r="4.5" fill="#185ADB"/>
+          <circle cx="1180" cy="72" r="1.5" fill="#FFFFFF"/>
+
+          <!-- Node C: Teal Node on High Arc -->
+          <circle cx="1160" cy="18" r="3.5" fill="#00A896" fill-opacity="0.95"/>
+
+          <!-- Node D: Mid-range Teal Node -->
+          <circle cx="1070" cy="58" r="4" fill="#00A896" fill-opacity="0.9"/>
+
+          <!-- Node E: Lower Flank Blue Node -->
+          <circle cx="1010" cy="158" r="9" fill="url(#node-blue-halo)"/>
+          <circle cx="1010" cy="158" r="4" fill="#185ADB" fill-opacity="0.85"/>
+
+          <!-- Node F: Branching Node on Right -->
+          <circle cx="1220" cy="148" r="3.5" fill="#00A896" fill-opacity="0.9"/>
+
+          <!-- Node G: Right Flank Node -->
+          <circle cx="1300" cy="108" r="3" fill="#185ADB" fill-opacity="0.8"/>
+
+          <!-- Node H: Far Right Upper Node -->
+          <circle cx="1380" cy="62" r="3.5" fill="#00A896" fill-opacity="0.85"/>
+
+          <!-- Node I: Diagonal Crossing Node -->
+          <circle cx="940" cy="88" r="3" fill="#185ADB" fill-opacity="0.75"/>
+
+          <!-- Node J: Lower Right Arc Node -->
+          <circle cx="1340" cy="258" r="3.5" fill="#00A896" fill-opacity="0.8"/>
+
+          <!-- Secondary Constellation Dashed Links Between Nodes -->
+          <line x1="940" y1="88" x2="1070" y2="58" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line x1="1070" y1="58" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.55"/>
+          <line x1="1060" y1="112" x2="1180" y2="72" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line x1="1180" y1="72" x2="1220" y2="148" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line x1="1060" y1="112" x2="1010" y2="158" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line x1="1180" y1="72" x2="1300" y2="108" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+          <line x1="1300" y1="108" x2="1380" y2="62" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line x1="1220" y1="148" x2="1340" y2="258" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Value Proposition & Pillars -->
+          <div class="hero-content">
+            <span class="hero-eyebrow">Inteligencia Artificial con Propósito</span>
+            
+            <h1>
+              Transformamos oportunidades de IA en <span class="highlight-teal">resultados reales.</span>
+            </h1>
+            
+            <p class="hero-lead">
+              Diseñamos y construimos soluciones de inteligencia artificial, automatización y transformación digital que resuelven problemas complejos, optimizan operaciones y generan valor sostenible.
+            </p>
+            
+            <div class="hero-cta-group">
+              <a href="#enfoque" class="btn btn-primary btn-lg">Conoce Nuestra Metodología →</a>
+              <a href="#portafolio" class="btn btn-secondary btn-lg">Ver Proyectos →</a>
+            </div>
+            
+            <!-- 3 Hero Pillars -->
+            <div class="hero-pillars-row" role="region" aria-label="Pilares Fundamentales">
+              <!-- Pillar 1 -->
+              <div class="pillar-card">
+                <div class="pillar-icon-box" aria-hidden="true">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 3l3-2 3 2v4H9z"></path></svg>
+                </div>
+                <div class="pillar-title">Estrategia + IA</div>
+                <div class="pillar-desc">Alineamos tecnología con objetivos de negocio.</div>
+              </div>
+              
+              <!-- Pillar 2 -->
+              <div class="pillar-card">
+                <div class="pillar-icon-box" aria-hidden="true">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </div>
+                <div class="pillar-title">Ejecutamos Soluciones</div>
+                <div class="pillar-desc">Desde la oportunidad hasta el producto en producción.</div>
+              </div>
+              
+              <!-- Pillar 3 -->
+              <div class="pillar-card">
+                <div class="pillar-icon-box" aria-hidden="true">
+                  <svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line><path d="M3 20h18"></path></svg>
+                </div>
+                <div class="pillar-title">Evidencia + Gobernanza</div>
+                <div class="pillar-desc">Decisiones trazables y resultados verificables.</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column: AAGm Methodology Visual Panel -->
+          <div class="hero-visual-wrapper">
+            <div class="aagm-hero-panel">
+              <!-- Panel Header -->
+              <div class="aagm-panel-header">
+                <div class="aagm-panel-title-wrap">
+                  <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <span class="aagm-panel-title">AAGm Methodology</span>
+                </div>
+                <span class="status-badge-green"><span class="dot"></span> Metodología activa</span>
+              </div>
+              
+              <!-- Headline -->
+              <div class="aagm-panel-headline">
+                <h3>AAGm – AI-Assisted Development</h3>
+                <p>Metodología propia para estructurar y gobernar el desarrollo con IA como parte activa del ciclo.</p>
+              </div>
+              
+              <!-- 4 Real Qualitative Process Cards -->
+              <div class="aagm-process-grid">
+                <div class="aagm-mini-card">
+                  <div class="mini-label">Enfoque Operativo</div>
+                  <div class="mini-value"><span class="dot-teal"></span> Trazable & Git</div>
+                </div>
+                <div class="aagm-mini-card">
+                  <div class="mini-label">Gobernanza</div>
+                  <div class="mini-value"><span class="dot-teal"></span> Humano en el Bucle</div>
+                </div>
+                <div class="aagm-mini-card">
+                  <div class="mini-label">Roles Activos</div>
+                  <div class="mini-value"><span class="dot-teal"></span> 4 Roles Clave</div>
+                </div>
+                <div class="aagm-mini-card">
+                  <div class="mini-label">Verificación</div>
+                  <div class="mini-value"><span class="dot-teal"></span> Evidencia Empírica</div>
+                </div>
+              </div>
+              
+              <!-- Flow Line in Panel -->
+              <div class="aagm-panel-flow">
+                <div class="aagm-flow-header">Flujo de Trabajo AAGm</div>
+                <div class="aagm-flow-steps">
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">1</div>
+                    <span class="step-title">Entender</span>
+                  </div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">2</div>
+                    <span class="step-title">Definir</span>
+                  </div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">3</div>
+                    <span class="step-title">Diseñar</span>
+                  </div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">4</div>
+                    <span class="step-title">Construir</span>
+                  </div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">5</div>
+                    <span class="step-title">Validar</span>
+                  </div>
+                  <span class="flow-arrow">→</span>
+                  <div class="flow-step-item">
+                    <div class="step-icon-circle">6</div>
+                    <span class="step-title">Evolucionar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        <div class="card">
-          <div class="card-icon">🤖</div>
-          <h3>Agentes Autónomos & RAG</h3>
-          <p>Agentes contextuales entrenados con los manuales, procedimientos y base de datos de tu empresa para responder con precisión quirúrgica.</p>
-          <ul class="card-features">
-            <li>Sistemas RAG con datos privados</li>
-            <li>Atención y calificación de prospectos</li>
-            <li>Derivación fluida a ejecutivos humanos</li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Section: Qué Hacemos (What We Do) -->
+    <section id="que-hacemos" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nuestras Capacidades Integradas</span>
+          <h2>De la oportunidad estratégica al resultado funcional</h2>
+          <p>Acompañamos a organizaciones líderes desde la identificación de valor hasta la construcción y mejora continua de sistemas con IA.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">📄</div>
-          <h3>Procesamiento Documental</h3>
-          <p>Extracción, validación y conciliación de facturas, contratos, DTEs y solicitudes sin intervención manual propensa a errores.</p>
-          <ul class="card-features">
-            <li>OCR inteligente y estructuración JSON</li>
-            <li>Conciliación automática con ERP</li>
-            <li>Validación y auditoría de reglas</li>
-          </ul>
+        
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
+            <h3>Estrategia & Diagnóstico de IA</h3>
+            <p>Identificamos dónde la IA genera verdadero retorno de inversión y diferenciación competitiva, priorizando casos de uso de alto impacto sin sobrecostos innecesarios.</p>
+            <ul class="card-features">
+              <li>Evaluación de viabilidad técnica y negocio</li>
+              <li>Matriz de impacto vs. complejidad</li>
+              <li>Ruta de implementación modular</li>
+            </ul>
+          </article>
+          
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4M8 16h.01M16 16h.01"></path></svg>
+            </div>
+            <h3>Agentes Autónomos & Multi-Agente</h3>
+            <p>Diseñamos e implementamos arquitecturas donde agentes especializados colaboran con personas y sistemas existentes para ejecutar tareas complejas con contexto corporativo.</p>
+            <ul class="card-features">
+              <li>RAG contextual sobre conocimiento privado</li>
+              <li>Gobernanza, control de sesgo y seguridad</li>
+              <li>Orquestación multi-rol trazable</li>
+            </ul>
+          </article>
+          
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3>Automatización & Desarrollo Asistido</h3>
+            <p>Aceleramos el ciclo de vida del software y la automatización de flujos conectando APIs, ERPs, CRMs y bases de datos con desarrollo asistido por IA de última generación.</p>
+            <ul class="card-features">
+              <li>Integración profunda con infraestructura actual</li>
+              <li>Prototipado rápido y validación continua</li>
+              <li>Entregables funcionales listos para producción</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="beneficios">
-    <div class="container">
-      <div class="section-header">
-        <span class="sub-badge">Transformación Operativa</span>
-        <h2>La diferencia de operar con noosadvisory</h2>
-        <p>Evoluciona desde procesos fragmentados hacia una arquitectura ágil y basada en datos.</p>
+    </section>
+
+    <!-- Section: Featured Work / Portafolio (Consolidated Case AAGm) -->
+    <section id="portafolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Evidencia & Portafolio</span>
+          <h2>Casos reales construidos con Inteligencia Artificial</h2>
+          <p>Demostramos nuestra capacidad con productos funcionales y metodologías propias de ingeniería, no con promesas comerciales.</p>
+        </div>
+
+        <!-- Case Showcase: AAGm -->
+        <div class="showcase-card">
+          <!-- Header Bar -->
+          <div class="showcase-header">
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="badge badge-brand">Project 01</span>
+              <span class="badge badge-teal">Metodología Propia</span>
+            </div>
+            <div style="font-size: var(--text-small); color: var(--color-slate); font-weight: 500;">
+              Framework de Gobernanza v1.9 · Estado: Activo
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="showcase-body">
+            <div class="showcase-grid">
+              
+              <!-- Left Column: Narrative -->
+              <div class="narrative-col">
+                <h3>AAGm · Autonomous Agent Governance Model</h3>
+                <p class="desc">
+                  Un modelo estructurado, trazable y repetible para concebir, diseñar y construir soluciones de software y automatización utilizando Inteligencia Artificial como parte activa y gobernada del proceso.
+                </p>
+
+                <!-- 5 Narrative Steps -->
+                <div class="narrative-steps-list">
+                  <div class="narrative-step-item">
+                    <span class="step-tag">01 · Challenge</span>
+                    <div>
+                      <h5>Desafío</h5>
+                      <p>Evitar el desarrollo improvisado con prompts aislados, pérdida de contexto y alucinaciones no controladas.</p>
+                    </div>
+                  </div>
+                  <div class="narrative-step-item">
+                    <span class="step-tag">02 · Approach</span>
+                    <div>
+                      <h5>Metodología</h5>
+                      <p>Gobernanza formal por roles especializados (Sponsor, Arquitecto, PM, Desarrollador, QA) con gates explícitos.</p>
+                    </div>
+                  </div>
+                  <div class="narrative-step-item">
+                    <span class="step-tag">03 · Solution</span>
+                    <div>
+                      <h5>Colaboración Humano + IA</h5>
+                      <p>Los humanos definen y aprueban decisiones estratégicas; los agentes de IA ejecutan y verifican con rigor.</p>
+                    </div>
+                  </div>
+                  <div class="narrative-step-item">
+                    <span class="step-tag">04 · Execution</span>
+                    <div>
+                      <h5>Ejecución Trazable</h5>
+                      <p>Task Packets atómicos, control de versiones Git y evidencia empírica obligatoria antes de cada pase.</p>
+                    </div>
+                  </div>
+                  <div class="narrative-step-item">
+                    <span class="step-tag">05 · Outcome</span>
+                    <div>
+                      <h5>Resultado Funcional</h5>
+                      <p>Software robusto de alta calidad entregado con protección garantizada de la línea base aprobada.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Visual Architecture Panel -->
+              <div class="architecture-panel">
+                <h4>
+                  <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  Matriz de Roles & Gobernanza Activa
+                </h4>
+
+                <div class="roles-grid">
+                  <div class="role-pill">
+                    <div class="role-name">Sponsor (Humano)</div>
+                    <div class="role-status"><span class="dot"></span> Autoridad & Gates</div>
+                  </div>
+                  <div class="role-pill">
+                    <div class="role-name">Solution Architect</div>
+                    <div class="role-status"><span class="dot"></span> Diseño & Baseline</div>
+                  </div>
+                  <div class="role-pill">
+                    <div class="role-name">AI Developer</div>
+                    <div class="role-status"><span class="dot"></span> Task Packets</div>
+                  </div>
+                  <div class="role-pill">
+                    <div class="role-name">QA Independiente</div>
+                    <div class="role-status"><span class="dot"></span> Certificación</div>
+                  </div>
+                </div>
+
+                <!-- Clean Comparison Box -->
+                <div class="comparison-clean">
+                  <h5>Diferencia Clave en la Práctica:</h5>
+                  <div class="comparison-item negative">
+                    <span>✕</span> <span><strong>Sin AAGm:</strong> Prompts aislados, código frágil y sin trazabilidad.</span>
+                  </div>
+                  <div class="comparison-item positive">
+                    <span>✓</span> <span><strong>Con AAGm:</strong> Ingeniería estructurada, evidencia y control continuo.</span>
+                  </div>
+                </div>
+
+                <a href="#contacto" class="btn btn-primary" style="width: 100%; justify-content: center;">Solicitar Demostración de AAGm →</a>
+              </div>
+
+            </div>
+
+            <!-- Banner: Built with AAGm -->
+            <div class="built-with-banner">
+              <div class="icon-box" aria-hidden="true">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <div>
+                <strong>Evidencia en Vivo:</strong> La propia Landing Page de NoosAdvisory que estás visualizando fue conceptualizada, diseñada, estructurada y desarrollada utilizando la metodología <strong>AAGm v1.9</strong>.
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <div class="comparison-wrapper">
-        <div class="comp-card without">
-          <div class="comp-title">❌ Operación Tradicional</div>
-          <ul class="comp-list">
-            <li>• Carga manual y doble digitación entre sistemas no integrados.</li>
-            <li>• Prospectos y oportunidades que se enfrían por demoras en respuesta.</li>
-            <li>• Decisiones comerciales basadas en intuición y planillas desactualizadas.</li>
-            <li>• Equipos clave consumidos en tareas administrativas repetitivas.</li>
-          </ul>
+    </section>
+
+    <!-- Section: Our Approach / Metodología (6 Fases) -->
+    <section id="enfoque" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Nuestro Enfoque Operativo</span>
+          <h2>Cómo transformamos una necesidad en una solución</h2>
+          <p>Un flujo sistemático, visual y medible para garantizar entrega ágil sin sacrificar robustez técnica.</p>
         </div>
-        <div class="comp-card with">
-          <div class="comp-title">✅ Con noosadvisory</div>
-          <ul class="comp-list">
-            <li>• Flujos orquestados y sincronizados de extremo a extremo en tiempo real.</li>
-            <li>• Calificación y atención instantánea 24/7 con agentes contextuales.</li>
-            <li>• Dashboards automatizados y visibilidad completa del rendimiento.</li>
-            <li>• Equipos enfocados en estrategia, clientes y generación de valor.</li>
-          </ul>
+
+        <div class="approach-grid">
+          <!-- Step 1 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 01</span>
+              <div class="approach-number">01</div>
+            </div>
+            <h4>Entender</h4>
+            <p>Identificamos los cuellos de botella del negocio, fricciones operativas y fuentes de datos disponibles.</p>
+            <div class="approach-output">Entregable: Matriz de Oportunidades</div>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 02</span>
+              <div class="approach-number">02</div>
+            </div>
+            <h4>Definir</h4>
+            <p>Alineamos expectativas con la alta dirección y definimos requerimientos funcionales y criterios de éxito.</p>
+            <div class="approach-output">Entregable: Project Brief & Scope</div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 03</span>
+              <div class="approach-number">03</div>
+            </div>
+            <h4>Diseñar</h4>
+            <p>Arquitectura de solución, integración de APIs, diseño de prompts, esquemas de datos y gobernanza multi-rol.</p>
+            <div class="approach-output">Entregable: Solution Design</div>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 04</span>
+              <div class="approach-number">04</div>
+            </div>
+            <h4>Construir</h4>
+            <p>Desarrollo acelerado asistido por IA mediante Task Packets atómicos y control estricto de versiones.</p>
+            <div class="approach-output">Entregable: Prototipo / MVP Funcional</div>
+          </article>
+
+          <!-- Step 5 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 05</span>
+              <div class="approach-number">05</div>
+            </div>
+            <h4>Validar</h4>
+            <p>Control de calidad independiente (QA), pruebas de no-regresión y auditoría con usuarios reales.</p>
+            <div class="approach-output">Entregable: Reporte de Evidencia QA</div>
+          </article>
+
+          <!-- Step 6 -->
+          <article class="approach-card">
+            <div class="approach-header">
+              <span class="badge badge-brand">Fase 06</span>
+              <div class="approach-number">06</div>
+            </div>
+            <h4>Evolucionar</h4>
+            <p>Monitoreo continuo de telemetría, refinamiento de modelos, ajuste de flujos y escalamiento operativo.</p>
+            <div class="approach-output">Entregable: Optimización Continua</div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="metodologia">
-    <div class="container">
-      <div class="section-header">
-        <span class="sub-badge">Ruta de Implementación</span>
-        <h2>Metodología clara y medible</h2>
-        <p>Un enfoque ágil por fases para asegurar retorno y adopción desde el primer mes.</p>
+    </section>
+
+    <!-- Section: Capabilities Matrix -->
+    <section id="capacidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Dominio Tecnológico & Práctico</span>
+          <h2>Capacidades que impulsan nuestras soluciones</h2>
+          <p>Combinamos tecnologías de frontera con estándares corporativos de arquitectura, integración y seguridad.</p>
+        </div>
+
+        <div class="capabilities-container">
+          <!-- Cap 1 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h3>Generative AI & LLMs</h3>
+            <p>Modelos de lenguaje avanzados adaptados a la jerga y reglas de negocio específicas de tu organización.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">OpenAI</span>
+              <span class="cap-tag">Anthropic Claude</span>
+              <span class="cap-tag">Google Gemini</span>
+              <span class="cap-tag">RAG Privado</span>
+            </div>
+          </article>
+
+          <!-- Cap 2 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            </div>
+            <h3>AI Agents & Multi-Agent Systems</h3>
+            <p>Agentes autónomos coordinados capaces de planificar, usar herramientas externas y ejecutar flujos de trabajo.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">AAGm</span>
+              <span class="cap-tag">Multi-Role</span>
+              <span class="cap-tag">MCP</span>
+              <span class="cap-tag">Function Calling</span>
+            </div>
+          </article>
+
+          <!-- Cap 3 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>AI-Assisted Development</h3>
+            <p>Ingeniería de software acelerada con IA para pasar de la idea a código funcional verificado en tiempo récord.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Prototipado Rápido</span>
+              <span class="cap-tag">TDD</span>
+              <span class="cap-tag">Antigravity IDE</span>
+              <span class="cap-tag">Testing de Regresión</span>
+            </div>
+          </article>
+
+          <!-- Cap 4 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+            </div>
+            <h3>Workflow Automation & Integrations</h3>
+            <p>Conexión fluida entre plataformas existentes, bases de datos y canales de comunicación corporativa.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">n8n</span>
+              <span class="cap-tag">REST / Webhooks</span>
+              <span class="cap-tag">CRMs (HubSpot/Salesforce)</span>
+              <span class="cap-tag">ERPs</span>
+            </div>
+          </article>
+
+          <!-- Cap 5 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            </div>
+            <h3>Cloud & Modern Web Architecture</h3>
+            <p>Infraestructura serverless de alta disponibilidad, despliegue global rápido y rendimiento de primer nivel.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Firebase</span>
+              <span class="cap-tag">Google Cloud</span>
+              <span class="cap-tag">Edge CDN</span>
+              <span class="cap-tag">Serverless</span>
+            </div>
+          </article>
+
+          <!-- Cap 6 -->
+          <article class="cap-card">
+            <div class="cap-icon" aria-hidden="true">
+              <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>AI Governance & Human-in-the-Loop</h3>
+            <p>Garantía de control humano, trazabilidad de decisiones, seguridad de datos privados y cumplimiento ético.</p>
+            <div class="cap-tags">
+              <span class="cap-tag">Control de Sesgo</span>
+              <span class="cap-tag">Privacidad de Datos</span>
+              <span class="cap-tag">Auditoría Git</span>
+              <span class="cap-tag">Gates de Aprobación</span>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="steps-container">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h4>Diagnóstico</h4>
-          <p>Mapeamos tus procesos actuales, identificamos cuellos de botella y priorizamos casos de uso de alto impacto.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h4>Diseño & PoC</h4>
-          <p>Estructuramos la arquitectura de datos, flujos de integración y validamos un prototipo funcional rápido.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h4>Despliegue</h4>
-          <p>Implementación en producción con seguridad empresarial, monitoreo continuo y pruebas rigurosas.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h4>Escalamiento</h4>
-          <p>Capacitación del equipo, soporte continuo y optimización evolutiva de los modelos y flujos.</p>
+    </section>
+
+    <!-- Section: About NoosAdvisory -->
+    <section id="nosotros" class="section-alt">
+      <div class="container">
+        <div class="about-box">
+          <div class="about-text">
+            <span class="section-tag">Sobre NoosAdvisory</span>
+            <h3>La intersección de consultoría estratégica y ejecución técnica</h3>
+            <p>
+              NoosAdvisory nació para cerrar la brecha entre las promesas conceptuales de la Inteligencia Artificial y la implementación operativa real en empresas de América Latina y el mundo.
+            </p>
+            <p>
+              No somos una consultora tradicional que entrega presentaciones teóricas desconectadas del código, ni tampoco un taller informal de experimentación. Somos un equipo especializado que acompaña a líderes visionarios con metodología, ingeniería y visión de negocio.
+            </p>
+          </div>
+
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-item-header">
+                <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle></svg>
+                <h5>Foco en Negocio</h5>
+              </div>
+              <p>Toda iniciativa de IA debe justificar su retorno, reducir costos o crear nuevas fuentes de ingreso.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-item-header">
+                <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <h5>Velocidad con Rigor</h5>
+              </div>
+              <p>Prototipos funcionales ágiles e iterativos sin sacrificar seguridad, arquitectura ni mantenibilidad.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-item-header">
+                <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <h5>Metodología Propia</h5>
+              </div>
+              <p>AAGm garantiza trazabilidad, control humano y prevención de regresiones en cada iteración.</p>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-item-header">
+                <svg class="icon-svg" style="color: var(--color-corporate-blue);" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <h5>Alianza Estratégica</h5>
+              </div>
+              <p>Nos integramos como un brazo de innovación aplicada junto a tu equipo directivo y técnico.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="contacto">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Impulsa la productividad de tu negocio hoy</h2>
-        <p>Conversemos sobre tus desafíos operativos y descubre cómo la inteligencia artificial puede transformar tu flujo de trabajo.</p>
-        <a href="mailto:contacto@noosadvisory.com" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Solicitar Diagnóstico Estratégico</a>
+    </section>
+
+    <!-- Section: Contact & CTA -->
+    <section id="contacto">
+      <div class="container">
+        <div class="cta-box">
+          <span class="section-tag">Inicia una Conversación Estratégica</span>
+          <h2>Transforma una oportunidad de IA en una solución funcional</h2>
+          <p class="cta-lead">
+            ¿Tienes un desafío operativo, un proceso manual crítico o una oportunidad de diferenciación con IA? Conversemos para estructurar un diagnóstico inicial y una ruta de prototipado rápido.
+          </p>
+
+          <!-- 3 Contact Channels -->
+          <div class="contact-cards-grid">
+            <div class="contact-method-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <h4>Email Directo</h4>
+              <p style="font-weight: 600; color: var(--color-corporate-blue);">contacto@noosadvisory.com</p>
+              <p style="font-size: var(--text-xs); margin-top: 4px;">Atención ejecutiva directa</p>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <h4>Sesión de Diagnóstico</h4>
+              <p style="font-weight: 600; color: var(--color-midnight);">30 minutos de evaluación</p>
+              <p style="font-size: var(--text-xs); color: var(--color-intelligent-teal); font-weight: 600; margin-top: 4px;">Sin costo para empresas</p>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <h4>Ubicación & Cobertura</h4>
+              <p style="font-weight: 600; color: var(--color-midnight);">Santiago, Chile</p>
+              <p style="font-size: var(--text-xs); margin-top: 4px;">Remoto & Presencial</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 28px;">
+            <a href="mailto:contacto@noosadvisory.com?subject=Solicitud%20de%20Diagn%C3%B3stico%20de%20IA%20-%20NoosAdvisory" class="btn btn-primary btn-lg">
+              Solicitar Diagnóstico Estratégico de IA →
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
+
+  <!-- Institutional Footer (Midnight Navy #0B1930) -->
   <footer>
     <div class="container">
-      <p>© 2026 noosadvisory. Todos los derechos reservados. Consultoría y Automatización de Procesos con IA.</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" aria-label="NoosAdvisory Inicio">
+            NOOS<span class="brand-accent">ADVISORY</span>
+          </a>
+          <p>
+            Consultoría estratégica, agentes autónomos y automatización inteligente. Transformamos necesidades en productos funcionales con Inteligencia Artificial.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Navegación</h5>
+            <ul>
+              <li><a href="#que-hacemos">Qué Hacemos</a></li>
+              <li><a href="#portafolio">Portafolio & AAGm</a></li>
+              <li><a href="#enfoque">Metodología</a></li>
+              <li><a href="#capacidades">Capacidades</a></li>
+              <li><a href="#nosotros">Sobre Nosotros</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Metodología & Casos</h5>
+            <ul>
+              <li><a href="#portafolio">Metodología AAGm</a></li>
+              <li><a href="#enfoque">Ciclo de 6 Fases</a></li>
+              <li><a href="#capacidades">Gobernanza de IA</a></li>
+              <li><a href="#contacto">Diagnóstico Inicial</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Contacto</h5>
+            <ul>
+              <li><a href="mailto:contacto@noosadvisory.com">contacto@noosadvisory.com</a></li>
+              <li><span style="color: #94A3B8;">Santiago, Chile · Cobertura Global</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 NoosAdvisory. Todos los derechos reservados.
+        </div>
+        <div>
+          Sitio desarrollado y gobernado bajo la metodología <strong>AAGm v1.9</strong> · <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">v1.0.0</span>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

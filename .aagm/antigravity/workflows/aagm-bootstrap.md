@@ -1,0 +1,2 @@
+# /aagm-bootstrap
+Prerequisite: AAGM runtime installed. Inspect Git and installation. Do not create application code, CI/CD, infrastructure or deployment workflows. If business context is missing, ask only the 3 minimum Sponsor Intake questions. Initialize/verify project state and move to DISCOVERY only when valid. Remote Git/cloud may remain NOT_CONFIGURED. Synchronize Dashboard after state changes.

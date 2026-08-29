@@ -1,0 +1,5 @@
+chore(aagm): sponsor approval - <gate>
+
+Approval: <what was approved>
+Sponsor: <human Git author>
+Evidence: <relative path or commit reference>

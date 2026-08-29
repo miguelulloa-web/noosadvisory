@@ -1,0 +1,28 @@
+aagm_version: "1.9"
+phase: OPERATION
+status: DEPLOYED
+project_level: A
+autonomy: CONTROLLED
+sponsor_profile: LIMITED
+active_role: ORCHESTRATOR_PM
+next_action: PROJECT_COMPLETE
+readiness: DEPLOYED
+protected_baseline:
+  enabled: true
+release:
+  candidate: "v1.0.0"
+  gate: APPROVED_AND_DEPLOYED
+  deployed_url: "https://noosadvisory.web.app"
+ci_cd:
+  strategy: MANUAL_FIREBASE_HOSTING
+  ci_status: CONFIGURED
+  deployment_mode: MANUAL
+remote_git:
+  status: CONFIGURED
+cloud:
+  status: DEPLOYED
+dashboard:
+  status: SYNCED
+  last_sync: "2026-08-29T12:49:00-04:00"
+blocking_issues: []
+pending_approvals: []
