@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=1.4">
+  <link rel="stylesheet" href="css/style.css?v=1.5">
 
   <!-- Structured Data: Schema.org (SEO & AI Discoverability) -->
   <script type="application/ld+json">
@@ -114,13 +114,13 @@
             <stop offset="100%" stop-color="#185ADB" stop-opacity="0" />
           </radialGradient>
           
-          <!-- Gradual Horizontal Opacity Mask: 100% Clean on Left (H1 Area), Ramps up smoothly towards AAGm Card on Right -->
+          <!-- Gradual Horizontal Opacity Mask: Clean on far left (H1 text), Smoothly active across center and right -->
           <mask id="hero-net-fade-mask">
             <linearGradient id="mask-grad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="#000000" stop-opacity="1" />
-              <stop offset="42%" stop-color="#000000" stop-opacity="1" />
-              <stop offset="58%" stop-color="#FFFFFF" stop-opacity="0.65" />
-              <stop offset="75%" stop-color="#FFFFFF" stop-opacity="1" />
+              <stop offset="28%" stop-color="#000000" stop-opacity="1" />
+              <stop offset="42%" stop-color="#FFFFFF" stop-opacity="0.45" />
+              <stop offset="62%" stop-color="#FFFFFF" stop-opacity="0.85" />
               <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
             </linearGradient>
             <rect x="0" y="0" width="1440" height="760" fill="url(#mask-grad)" />
@@ -144,22 +144,22 @@
         <line class="net-constellation-link net-link-1" x1="1080" y1="620" x2="1210" y2="590" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
         <line class="net-constellation-link net-link-2" x1="1210" y1="590" x2="1330" y2="630" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
 
-        <!-- Upper-Right Network with Mask (Concentrated from Center to Right, 100% Clean H1 Area) -->
+        <!-- Upper & Center Network with Mask (Fluid Expansion from Center to Right) -->
         <g mask="url(#hero-net-fade-mask)">
-          <!-- Line 1: Upper dominant teal ribbon -->
-          <path class="net-flow-curve net-flow-u1" d="M 680 72 C 810 42, 940 90, 1070 58 C 1190 30, 1310 48, 1440 76" stroke="url(#net-teal-bright)" stroke-width="1.8" stroke-opacity="0.75" stroke-linecap="round"/>
+          <!-- Line 1: Upper dominant teal ribbon (extended from center x=460) -->
+          <path class="net-flow-curve net-flow-u1" d="M 460 110 C 620 40, 840 95, 1070 58 C 1210 25, 1330 48, 1440 76" stroke="url(#net-teal-bright)" stroke-width="1.8" stroke-opacity="0.75" stroke-linecap="round"/>
           
-          <!-- Line 2: Intertwining Blue curve -->
-          <path class="net-flow-curve net-flow-u2" d="M 640 115 C 780 95, 900 170, 1060 112 C 1180 72, 1300 108, 1440 138" stroke="url(#net-blue-fade)" stroke-width="1.4" stroke-opacity="0.6" stroke-linecap="round"/>
+          <!-- Line 2: Intertwining Blue curve (extended from x=490) -->
+          <path class="net-flow-curve net-flow-u2" d="M 490 155 C 650 110, 870 175, 1060 112 C 1200 68, 1320 108, 1440 138" stroke="url(#net-blue-fade)" stroke-width="1.4" stroke-opacity="0.6" stroke-linecap="round"/>
           
-          <!-- Line 3: Sweeping curve dipping near card top -->
-          <path class="net-flow-curve net-flow-u3" d="M 620 152 C 760 140, 860 220, 1010 158 C 1150 108, 1280 158, 1440 192" stroke="url(#net-teal-fade)" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round"/>
+          <!-- Line 3: Sweeping curve dipping near card top (extended from x=520) -->
+          <path class="net-flow-curve net-flow-u3" d="M 520 195 C 680 160, 830 225, 1010 158 C 1170 102, 1290 158, 1440 192" stroke="url(#net-teal-fade)" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round"/>
           
-          <!-- Line 4: High arc going to upper right edge -->
-          <path class="net-flow-curve net-flow-u4" d="M 740 30 C 870 12, 1010 38, 1160 18 C 1280 2, 1370 18, 1440 36" stroke="#185ADB" stroke-width="1.1" stroke-opacity="0.4" stroke-linecap="round"/>
+          <!-- Line 4: High arc going to upper right edge (extended from x=580) -->
+          <path class="net-flow-curve net-flow-u4" d="M 580 50 C 740 15, 960 38, 1160 18 C 1290 2, 1380 18, 1440 36" stroke="#185ADB" stroke-width="1.1" stroke-opacity="0.4" stroke-linecap="round"/>
           
-          <!-- Line 5: Delicate inner contour curve -->
-          <path class="net-flow-curve net-flow-u5" d="M 660 135 C 790 125, 930 130, 1080 82 C 1210 46, 1340 72, 1440 92" stroke="#00A896" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+          <!-- Line 5: Delicate inner contour curve (extended from x=510) -->
+          <path class="net-flow-curve net-flow-u5" d="M 510 140 C 690 130, 900 135, 1080 82 C 1220 42, 1350 72, 1440 92" stroke="#00A896" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
           
           <!-- Line 6: Branching curve heading down right flank -->
           <path class="net-flow-curve net-flow-u6" d="M 1060 112 C 1140 148, 1220 218, 1340 258 C 1390 272, 1420 278, 1440 282" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.45" stroke-linecap="round"/>
@@ -167,29 +167,43 @@
           <!-- Line 7: Lower branching curve behind card right shoulder -->
           <path class="net-flow-curve net-flow-u7" d="M 1010 158 C 1100 208, 1180 278, 1300 318 C 1360 338, 1410 342, 1440 348" stroke="#00A896" stroke-width="1.1" stroke-opacity="0.38" stroke-linecap="round"/>
           
-          <!-- Line 8: Cross connecting diagonal arc -->
-          <path class="net-flow-curve net-flow-u8" d="M 880 78 C 970 114, 1070 178, 1190 148 C 1300 118, 1380 158, 1440 168" stroke="#00A896" stroke-width="0.95" stroke-opacity="0.4" stroke-linecap="round"/>
+          <!-- Line 8: Cross connecting diagonal arc (extended across center) -->
+          <path class="net-flow-curve net-flow-u8" d="M 660 100 C 810 115, 980 180, 1190 148 C 1310 115, 1390 158, 1440 168" stroke="#00A896" stroke-width="0.95" stroke-opacity="0.4" stroke-linecap="round"/>
+
+          <!-- Center-Area Constellation Nodes (Expanding dynamic life into center) -->
+          <!-- Node Center 1: Mid-left Teal Node with Halo -->
+          <circle class="net-halo net-halo-teal net-halo-pulse-c1" cx="620" cy="85" r="12" fill="url(#node-teal-halo)"/>
+          <circle class="net-node net-node-primary net-float-1" cx="620" cy="85" r="4.2" fill="#00A896"/>
+          <circle class="net-node-center" cx="620" cy="85" r="1.5" fill="#FFFFFF"/>
+
+          <!-- Node Center 2: Mid-center Blue Node with Halo -->
+          <circle class="net-halo net-halo-blue net-halo-pulse-c2" cx="770" cy="140" r="11" fill="url(#node-blue-halo)"/>
+          <circle class="net-node net-node-primary net-float-2" cx="770" cy="140" r="4.2" fill="#185ADB"/>
+          <circle class="net-node-center" cx="770" cy="140" r="1.5" fill="#FFFFFF"/>
+
+          <!-- Node Center 3: Center-Right Sparkle Node -->
+          <circle class="net-node net-node-sparkle-3 net-float-3" cx="890" cy="98" r="3.5" fill="#00A896" fill-opacity="0.9"/>
 
           <!-- Upper-Right Network Nodes (Matching PNG Exact Placement & Visual Hierarchy) -->
           <!-- Node A: Large Featured Teal Node with Halo (Key Focal Node in PNG) -->
           <circle class="net-halo net-halo-teal net-halo-pulse-1" cx="1060" cy="112" r="14" fill="url(#node-teal-halo)"/>
-          <circle class="net-node net-node-primary" cx="1060" cy="112" r="5" fill="#00A896"/>
+          <circle class="net-node net-node-primary net-float-1" cx="1060" cy="112" r="5" fill="#00A896"/>
           <circle class="net-node-center" cx="1060" cy="112" r="2" fill="#FFFFFF"/>
 
           <!-- Node B: Featured Blue Node (Upper Right) -->
           <circle class="net-halo net-halo-blue net-halo-pulse-2" cx="1180" cy="72" r="11" fill="url(#node-blue-halo)"/>
-          <circle class="net-node net-node-primary" cx="1180" cy="72" r="4.5" fill="#185ADB"/>
+          <circle class="net-node net-node-primary net-float-2" cx="1180" cy="72" r="4.5" fill="#185ADB"/>
           <circle class="net-node-center" cx="1180" cy="72" r="1.5" fill="#FFFFFF"/>
 
           <!-- Node C: Teal Node on High Arc -->
-          <circle class="net-node net-node-sparkle-3" cx="1160" cy="18" r="3.5" fill="#00A896" fill-opacity="0.95"/>
+          <circle class="net-node net-node-sparkle-3 net-float-3" cx="1160" cy="18" r="3.5" fill="#00A896" fill-opacity="0.95"/>
 
           <!-- Node D: Mid-range Teal Node -->
           <circle class="net-node net-node-sparkle-4" cx="1070" cy="58" r="4" fill="#00A896" fill-opacity="0.9"/>
 
           <!-- Node E: Lower Flank Blue Node -->
           <circle class="net-halo net-halo-blue net-halo-pulse-3" cx="1010" cy="158" r="9" fill="url(#node-blue-halo)"/>
-          <circle class="net-node" cx="1010" cy="158" r="4" fill="#185ADB" fill-opacity="0.85"/>
+          <circle class="net-node net-float-1" cx="1010" cy="158" r="4" fill="#185ADB" fill-opacity="0.85"/>
 
           <!-- Node F: Branching Node on Right -->
           <circle class="net-node net-node-sparkle-5" cx="1220" cy="148" r="3.5" fill="#00A896" fill-opacity="0.9"/>
@@ -206,15 +220,18 @@
           <!-- Node J: Lower Right Arc Node -->
           <circle class="net-node net-node-sparkle-2" cx="1340" cy="258" r="3.5" fill="#00A896" fill-opacity="0.8"/>
 
-          <!-- Secondary Constellation Dashed Links Between Nodes -->
-          <line class="net-constellation-link net-link-1" x1="940" y1="88" x2="1070" y2="58" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
-          <line class="net-constellation-link net-link-2" x1="1070" y1="58" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.55"/>
-          <line class="net-constellation-link net-link-3" x1="1060" y1="112" x2="1180" y2="72" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
-          <line class="net-constellation-link net-link-4" x1="1180" y1="72" x2="1220" y2="148" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-          <line class="net-constellation-link net-link-5" x1="1060" y1="112" x2="1010" y2="158" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-          <line class="net-constellation-link net-link-6" x1="1180" y1="72" x2="1300" y2="108" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
-          <line x1="1300" y1="108" x2="1380" y2="62" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-          <line x1="1220" y1="148" x2="1340" y2="258" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+          <!-- Constellation Dashed Links Spanning Center to Right -->
+          <line class="net-constellation-link net-link-1" x1="620" y1="85" x2="770" y2="140" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-2" x1="770" y1="140" x2="890" y2="98" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-3" x1="890" y1="98" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line class="net-constellation-link net-link-4" x1="940" y1="88" x2="1070" y2="58" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line class="net-constellation-link net-link-5" x1="1070" y1="58" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.55"/>
+          <line class="net-constellation-link net-link-6" x1="1060" y1="112" x2="1180" y2="72" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line class="net-constellation-link net-link-2" x1="1180" y1="72" x2="1220" y2="148" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-3" x1="1060" y1="112" x2="1010" y2="158" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-4" x1="1180" y1="72" x2="1300" y2="108" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+          <line class="net-constellation-link net-link-5" x1="1300" y1="108" x2="1380" y2="62" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-6" x1="1220" y1="148" x2="1340" y2="258" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
         </g>
       </svg>
 
@@ -437,37 +454,47 @@
                   Un modelo estructurado, trazable y repetible para concebir, diseñar y construir soluciones de software y automatización utilizando Inteligencia Artificial como parte activa y gobernada del proceso.
                 </p>
 
+                <!-- Minimalist Interactive Narrative Filter Tabs -->
+                <div class="narrative-filter-bar" role="tablist" aria-label="Dimensiones del Caso AAGm">
+                  <button class="filter-tab active" data-step-target="all" type="button">Todos</button>
+                  <button class="filter-tab" data-step-target="01" type="button">01 Desafío</button>
+                  <button class="filter-tab" data-step-target="02" type="button">02 Metodología</button>
+                  <button class="filter-tab" data-step-target="03" type="button">03 Solución IA</button>
+                  <button class="filter-tab" data-step-target="04" type="button">04 Ejecución</button>
+                  <button class="filter-tab" data-step-target="05" type="button">05 Resultado</button>
+                </div>
+
                 <!-- 5 Narrative Steps -->
-                <div class="narrative-steps-list">
-                  <div class="narrative-step-item">
+                <div class="narrative-steps-list" id="aagm-narrative-steps">
+                  <div class="narrative-step-item" data-step="01">
                     <span class="step-tag">01 · Challenge</span>
                     <div>
                       <h5>Desafío</h5>
                       <p>Evitar el desarrollo improvisado con prompts aislados, pérdida de contexto y alucinaciones no controladas.</p>
                     </div>
                   </div>
-                  <div class="narrative-step-item">
+                  <div class="narrative-step-item" data-step="02">
                     <span class="step-tag">02 · Approach</span>
                     <div>
                       <h5>Metodología</h5>
                       <p>Gobernanza formal por roles especializados (Sponsor, Arquitecto, PM, Desarrollador, QA) con gates explícitos.</p>
                     </div>
                   </div>
-                  <div class="narrative-step-item">
+                  <div class="narrative-step-item" data-step="03">
                     <span class="step-tag">03 · Solution</span>
                     <div>
                       <h5>Colaboración Humano + IA</h5>
                       <p>Los humanos definen y aprueban decisiones estratégicas; los agentes de IA ejecutan y verifican con rigor.</p>
                     </div>
                   </div>
-                  <div class="narrative-step-item">
+                  <div class="narrative-step-item" data-step="04">
                     <span class="step-tag">04 · Execution</span>
                     <div>
                       <h5>Ejecución Trazable</h5>
                       <p>Task Packets atómicos, control de versiones Git y evidencia empírica obligatoria antes de cada pase.</p>
                     </div>
                   </div>
-                  <div class="narrative-step-item">
+                  <div class="narrative-step-item" data-step="05">
                     <span class="step-tag">05 · Outcome</span>
                     <div>
                       <h5>Resultado Funcional</h5>
@@ -865,7 +892,7 @@
           © 2026 NoosAdvisory. Todos los derechos reservados.
         </div>
         <div>
-          Sitio desarrollado y gobernado bajo la metodología <strong>AAGm v1.9</strong> · <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">v1.1.0</span>
+          Sitio desarrollado y gobernado bajo la metodología <strong>AAGm v1.9</strong> · <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">v1.2.0</span>
         </div>
       </div>
     </div>
