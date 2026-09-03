@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=1.3">
+  <link rel="stylesheet" href="css/style.css?v=1.4">
 
   <!-- Structured Data: Schema.org (SEO & AI Discoverability) -->
   <script type="application/ld+json">
@@ -128,91 +128,91 @@
         </defs>
 
         <!-- Bottom-Right Wave / Gradient Fluid Mass (matches PNG bottom right) -->
-        <path d="M 800 760 C 940 630, 1140 565, 1340 585 C 1400 592, 1430 600, 1440 605 L 1440 760 Z" fill="url(#hero-bottom-wave-grad)" />
-        <path d="M 880 760 C 990 670, 1160 620, 1360 635 L 1440 655 L 1440 760 Z" fill="#00A896" fill-opacity="0.04" />
+        <path class="net-ambient-wave" d="M 800 760 C 940 630, 1140 565, 1340 585 C 1400 592, 1430 600, 1440 605 L 1440 760 Z" fill="url(#hero-bottom-wave-grad)" />
+        <path class="net-ambient-wave" d="M 880 760 C 990 670, 1160 620, 1360 635 L 1440 655 L 1440 760 Z" fill="#00A896" fill-opacity="0.04" />
 
         <!-- Bottom-Right Flowing Network Curves -->
-        <path d="M 740 760 C 870 665, 1070 585, 1310 595 C 1375 598, 1415 605, 1440 612" stroke="#00A896" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
-        <path d="M 820 760 C 930 685, 1110 625, 1350 635 C 1395 638, 1425 645, 1440 650" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.4" stroke-linecap="round"/>
-        <path d="M 910 760 C 1030 705, 1180 665, 1400 675 C 1420 676, 1432 680, 1440 685" stroke="#00A896" stroke-width="1" stroke-opacity="0.3" stroke-linecap="round"/>
+        <path class="net-flow-curve net-flow-b1" d="M 740 760 C 870 665, 1070 585, 1310 595 C 1375 598, 1415 605, 1440 612" stroke="#00A896" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
+        <path class="net-flow-curve net-flow-b2" d="M 820 760 C 930 685, 1110 625, 1350 635 C 1395 638, 1425 645, 1440 650" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.4" stroke-linecap="round"/>
+        <path class="net-flow-curve net-flow-b3" d="M 910 760 C 1030 705, 1180 665, 1400 675 C 1420 676, 1432 680, 1440 685" stroke="#00A896" stroke-width="1" stroke-opacity="0.3" stroke-linecap="round"/>
         
         <!-- Bottom-Right Nodes -->
-        <circle cx="1080" cy="620" r="3.5" fill="#00A896" fill-opacity="0.85"/>
-        <circle cx="1210" cy="590" r="10" fill="url(#node-blue-halo)"/>
-        <circle cx="1210" cy="590" r="4.5" fill="#185ADB" fill-opacity="0.9"/>
-        <circle cx="1330" cy="630" r="3" fill="#00A896" fill-opacity="0.8"/>
-        <line x1="1080" y1="620" x2="1210" y2="590" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-        <line x1="1210" y1="590" x2="1330" y2="630" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+        <circle class="net-node net-node-sparkle-1" cx="1080" cy="620" r="3.5" fill="#00A896" fill-opacity="0.85"/>
+        <circle class="net-halo net-halo-blue net-halo-pulse-b" cx="1210" cy="590" r="10" fill="url(#node-blue-halo)"/>
+        <circle class="net-node net-node-primary" cx="1210" cy="590" r="4.5" fill="#185ADB" fill-opacity="0.9"/>
+        <circle class="net-node net-node-sparkle-2" cx="1330" cy="630" r="3" fill="#00A896" fill-opacity="0.8"/>
+        <line class="net-constellation-link net-link-1" x1="1080" y1="620" x2="1210" y2="590" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+        <line class="net-constellation-link net-link-2" x1="1210" y1="590" x2="1330" y2="630" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
 
         <!-- Upper-Right Network with Mask (Concentrated from Center to Right, 100% Clean H1 Area) -->
         <g mask="url(#hero-net-fade-mask)">
           <!-- Line 1: Upper dominant teal ribbon -->
-          <path d="M 680 72 C 810 42, 940 90, 1070 58 C 1190 30, 1310 48, 1440 76" stroke="url(#net-teal-bright)" stroke-width="1.8" stroke-opacity="0.75" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u1" d="M 680 72 C 810 42, 940 90, 1070 58 C 1190 30, 1310 48, 1440 76" stroke="url(#net-teal-bright)" stroke-width="1.8" stroke-opacity="0.75" stroke-linecap="round"/>
           
           <!-- Line 2: Intertwining Blue curve -->
-          <path d="M 640 115 C 780 95, 900 170, 1060 112 C 1180 72, 1300 108, 1440 138" stroke="url(#net-blue-fade)" stroke-width="1.4" stroke-opacity="0.6" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u2" d="M 640 115 C 780 95, 900 170, 1060 112 C 1180 72, 1300 108, 1440 138" stroke="url(#net-blue-fade)" stroke-width="1.4" stroke-opacity="0.6" stroke-linecap="round"/>
           
           <!-- Line 3: Sweeping curve dipping near card top -->
-          <path d="M 620 152 C 760 140, 860 220, 1010 158 C 1150 108, 1280 158, 1440 192" stroke="url(#net-teal-fade)" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u3" d="M 620 152 C 760 140, 860 220, 1010 158 C 1150 108, 1280 158, 1440 192" stroke="url(#net-teal-fade)" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round"/>
           
           <!-- Line 4: High arc going to upper right edge -->
-          <path d="M 740 30 C 870 12, 1010 38, 1160 18 C 1280 2, 1370 18, 1440 36" stroke="#185ADB" stroke-width="1.1" stroke-opacity="0.4" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u4" d="M 740 30 C 870 12, 1010 38, 1160 18 C 1280 2, 1370 18, 1440 36" stroke="#185ADB" stroke-width="1.1" stroke-opacity="0.4" stroke-linecap="round"/>
           
           <!-- Line 5: Delicate inner contour curve -->
-          <path d="M 660 135 C 790 125, 930 130, 1080 82 C 1210 46, 1340 72, 1440 92" stroke="#00A896" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u5" d="M 660 135 C 790 125, 930 130, 1080 82 C 1210 46, 1340 72, 1440 92" stroke="#00A896" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
           
           <!-- Line 6: Branching curve heading down right flank -->
-          <path d="M 1060 112 C 1140 148, 1220 218, 1340 258 C 1390 272, 1420 278, 1440 282" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.45" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u6" d="M 1060 112 C 1140 148, 1220 218, 1340 258 C 1390 272, 1420 278, 1440 282" stroke="#185ADB" stroke-width="1.25" stroke-opacity="0.45" stroke-linecap="round"/>
           
           <!-- Line 7: Lower branching curve behind card right shoulder -->
-          <path d="M 1010 158 C 1100 208, 1180 278, 1300 318 C 1360 338, 1410 342, 1440 348" stroke="#00A896" stroke-width="1.1" stroke-opacity="0.38" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u7" d="M 1010 158 C 1100 208, 1180 278, 1300 318 C 1360 338, 1410 342, 1440 348" stroke="#00A896" stroke-width="1.1" stroke-opacity="0.38" stroke-linecap="round"/>
           
           <!-- Line 8: Cross connecting diagonal arc -->
-          <path d="M 880 78 C 970 114, 1070 178, 1190 148 C 1300 118, 1380 158, 1440 168" stroke="#00A896" stroke-width="0.95" stroke-opacity="0.4" stroke-linecap="round"/>
+          <path class="net-flow-curve net-flow-u8" d="M 880 78 C 970 114, 1070 178, 1190 148 C 1300 118, 1380 158, 1440 168" stroke="#00A896" stroke-width="0.95" stroke-opacity="0.4" stroke-linecap="round"/>
 
           <!-- Upper-Right Network Nodes (Matching PNG Exact Placement & Visual Hierarchy) -->
           <!-- Node A: Large Featured Teal Node with Halo (Key Focal Node in PNG) -->
-          <circle cx="1060" cy="112" r="14" fill="url(#node-teal-halo)"/>
-          <circle cx="1060" cy="112" r="5" fill="#00A896"/>
-          <circle cx="1060" cy="112" r="2" fill="#FFFFFF"/>
+          <circle class="net-halo net-halo-teal net-halo-pulse-1" cx="1060" cy="112" r="14" fill="url(#node-teal-halo)"/>
+          <circle class="net-node net-node-primary" cx="1060" cy="112" r="5" fill="#00A896"/>
+          <circle class="net-node-center" cx="1060" cy="112" r="2" fill="#FFFFFF"/>
 
           <!-- Node B: Featured Blue Node (Upper Right) -->
-          <circle cx="1180" cy="72" r="11" fill="url(#node-blue-halo)"/>
-          <circle cx="1180" cy="72" r="4.5" fill="#185ADB"/>
-          <circle cx="1180" cy="72" r="1.5" fill="#FFFFFF"/>
+          <circle class="net-halo net-halo-blue net-halo-pulse-2" cx="1180" cy="72" r="11" fill="url(#node-blue-halo)"/>
+          <circle class="net-node net-node-primary" cx="1180" cy="72" r="4.5" fill="#185ADB"/>
+          <circle class="net-node-center" cx="1180" cy="72" r="1.5" fill="#FFFFFF"/>
 
           <!-- Node C: Teal Node on High Arc -->
-          <circle cx="1160" cy="18" r="3.5" fill="#00A896" fill-opacity="0.95"/>
+          <circle class="net-node net-node-sparkle-3" cx="1160" cy="18" r="3.5" fill="#00A896" fill-opacity="0.95"/>
 
           <!-- Node D: Mid-range Teal Node -->
-          <circle cx="1070" cy="58" r="4" fill="#00A896" fill-opacity="0.9"/>
+          <circle class="net-node net-node-sparkle-4" cx="1070" cy="58" r="4" fill="#00A896" fill-opacity="0.9"/>
 
           <!-- Node E: Lower Flank Blue Node -->
-          <circle cx="1010" cy="158" r="9" fill="url(#node-blue-halo)"/>
-          <circle cx="1010" cy="158" r="4" fill="#185ADB" fill-opacity="0.85"/>
+          <circle class="net-halo net-halo-blue net-halo-pulse-3" cx="1010" cy="158" r="9" fill="url(#node-blue-halo)"/>
+          <circle class="net-node" cx="1010" cy="158" r="4" fill="#185ADB" fill-opacity="0.85"/>
 
           <!-- Node F: Branching Node on Right -->
-          <circle cx="1220" cy="148" r="3.5" fill="#00A896" fill-opacity="0.9"/>
+          <circle class="net-node net-node-sparkle-5" cx="1220" cy="148" r="3.5" fill="#00A896" fill-opacity="0.9"/>
 
           <!-- Node G: Right Flank Node -->
-          <circle cx="1300" cy="108" r="3" fill="#185ADB" fill-opacity="0.8"/>
+          <circle class="net-node net-node-sparkle-6" cx="1300" cy="108" r="3" fill="#185ADB" fill-opacity="0.8"/>
 
           <!-- Node H: Far Right Upper Node -->
-          <circle cx="1380" cy="62" r="3.5" fill="#00A896" fill-opacity="0.85"/>
+          <circle class="net-node net-node-sparkle-7" cx="1380" cy="62" r="3.5" fill="#00A896" fill-opacity="0.85"/>
 
           <!-- Node I: Diagonal Crossing Node -->
-          <circle cx="940" cy="88" r="3" fill="#185ADB" fill-opacity="0.75"/>
+          <circle class="net-node net-node-sparkle-1" cx="940" cy="88" r="3" fill="#185ADB" fill-opacity="0.75"/>
 
           <!-- Node J: Lower Right Arc Node -->
-          <circle cx="1340" cy="258" r="3.5" fill="#00A896" fill-opacity="0.8"/>
+          <circle class="net-node net-node-sparkle-2" cx="1340" cy="258" r="3.5" fill="#00A896" fill-opacity="0.8"/>
 
           <!-- Secondary Constellation Dashed Links Between Nodes -->
-          <line x1="940" y1="88" x2="1070" y2="58" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
-          <line x1="1070" y1="58" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.55"/>
-          <line x1="1060" y1="112" x2="1180" y2="72" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
-          <line x1="1180" y1="72" x2="1220" y2="148" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-          <line x1="1060" y1="112" x2="1010" y2="158" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
-          <line x1="1180" y1="72" x2="1300" y2="108" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
+          <line class="net-constellation-link net-link-1" x1="940" y1="88" x2="1070" y2="58" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line class="net-constellation-link net-link-2" x1="1070" y1="58" x2="1060" y2="112" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.55"/>
+          <line class="net-constellation-link net-link-3" x1="1060" y1="112" x2="1180" y2="72" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+          <line class="net-constellation-link net-link-4" x1="1180" y1="72" x2="1220" y2="148" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-5" x1="1060" y1="112" x2="1010" y2="158" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
+          <line class="net-constellation-link net-link-6" x1="1180" y1="72" x2="1300" y2="108" stroke="#185ADB" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.4"/>
           <line x1="1300" y1="108" x2="1380" y2="62" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.45"/>
           <line x1="1220" y1="148" x2="1340" y2="258" stroke="#00A896" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
         </g>
@@ -865,7 +865,7 @@
           © 2026 NoosAdvisory. Todos los derechos reservados.
         </div>
         <div>
-          Sitio desarrollado y gobernado bajo la metodología <strong>AAGm v1.9</strong> · <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">v1.0.0</span>
+          Sitio desarrollado y gobernado bajo la metodología <strong>AAGm v1.9</strong> · <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #FFFFFF; font-weight: 600; font-size: 0.75rem;">v1.1.0</span>
         </div>
       </div>
     </div>

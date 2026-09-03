@@ -328,6 +328,206 @@ header {
   display: block !important;
 }
 
+/* 1. Flowing Data Stream Lines */
+.net-flow-curve {
+  stroke-dasharray: 220 480;
+  stroke-dashoffset: 700;
+  will-change: stroke-dashoffset;
+}
+
+.net-flow-u1 {
+  stroke-dasharray: 260 520;
+  animation: netFlowForward 13s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.net-flow-u2 {
+  stroke-dasharray: 190 440;
+  animation: netFlowForward 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -3.5s;
+}
+
+.net-flow-u3 {
+  stroke-dasharray: 230 490;
+  animation: netFlowForward 17s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -7s;
+}
+
+.net-flow-u4 {
+  stroke-dasharray: 160 410;
+  animation: netFlowForward 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -2s;
+}
+
+.net-flow-u5 {
+  stroke-dasharray: 200 470;
+  animation: netFlowForward 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -5s;
+}
+
+.net-flow-u6 {
+  stroke-dasharray: 170 390;
+  animation: netFlowForward 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -4s;
+}
+
+.net-flow-u7 {
+  stroke-dasharray: 180 430;
+  animation: netFlowForward 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -8.5s;
+}
+
+.net-flow-u8 {
+  stroke-dasharray: 150 380;
+  animation: netFlowForward 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -1.5s;
+}
+
+/* Bottom Flow Curves */
+.net-flow-b1 {
+  stroke-dasharray: 230 460;
+  animation: netFlowForward 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -4.5s;
+}
+
+.net-flow-b2 {
+  stroke-dasharray: 200 430;
+  animation: netFlowForward 13s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -7.5s;
+}
+
+.net-flow-b3 {
+  stroke-dasharray: 170 400;
+  animation: netFlowForward 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation-delay: -2.5s;
+}
+
+@keyframes netFlowForward {
+  0% {
+    stroke-dashoffset: 740;
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.95;
+  }
+  100% {
+    stroke-dashoffset: -740;
+    opacity: 0.3;
+  }
+}
+
+/* 2. Asynchronous Breathing Halos */
+.net-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.net-halo-pulse-1 {
+  animation: haloBreath 4.5s ease-in-out infinite;
+}
+
+.net-halo-pulse-2 {
+  animation: haloBreath 5.2s ease-in-out infinite;
+  animation-delay: -1.8s;
+}
+
+.net-halo-pulse-3 {
+  animation: haloBreath 4.8s ease-in-out infinite;
+  animation-delay: -3.2s;
+}
+
+.net-halo-pulse-b {
+  animation: haloBreath 5.6s ease-in-out infinite;
+  animation-delay: -2.4s;
+}
+
+@keyframes haloBreath {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.95;
+  }
+}
+
+/* 3. Node Core Sparkle & Subtle Pulse */
+.net-node-primary {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeCorePulse 4.5s ease-in-out infinite;
+}
+
+@keyframes nodeCorePulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 1px rgba(0, 168, 150, 0.3));
+  }
+  50% {
+    transform: scale(1.18);
+    filter: drop-shadow(0 0 6px rgba(0, 168, 150, 0.85));
+  }
+}
+
+.net-node-sparkle-1 { animation: nodeSparkle 3.8s ease-in-out infinite; }
+.net-node-sparkle-2 { animation: nodeSparkle 4.2s ease-in-out infinite; animation-delay: -1.2s; }
+.net-node-sparkle-3 { animation: nodeSparkle 3.5s ease-in-out infinite; animation-delay: -2.1s; }
+.net-node-sparkle-4 { animation: nodeSparkle 4.7s ease-in-out infinite; animation-delay: -0.8s; }
+.net-node-sparkle-5 { animation: nodeSparkle 3.9s ease-in-out infinite; animation-delay: -2.7s; }
+.net-node-sparkle-6 { animation: nodeSparkle 4.4s ease-in-out infinite; animation-delay: -1.9s; }
+.net-node-sparkle-7 { animation: nodeSparkle 4.1s ease-in-out infinite; animation-delay: -3.4s; }
+
+@keyframes nodeSparkle {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.22);
+  }
+}
+
+/* 4. Constellation Traveling Dashes */
+.net-constellation-link {
+  animation: dashTravel 6s linear infinite;
+  will-change: stroke-dashoffset;
+}
+
+.net-link-2 { animation-delay: -1.5s; }
+.net-link-3 { animation-delay: -3.0s; }
+.net-link-4 { animation-delay: -4.2s; }
+.net-link-5 { animation-delay: -2.0s; }
+.net-link-6 { animation-delay: -0.8s; }
+
+@keyframes dashTravel {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+
+/* 5. Fluid Wave Subtle Gradient Shimmer */
+.net-ambient-wave {
+  animation: waveShimmer 9s ease-in-out infinite alternate;
+  will-change: opacity;
+}
+
+@keyframes waveShimmer {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .hero .container {
   position: relative;
   z-index: 1;
