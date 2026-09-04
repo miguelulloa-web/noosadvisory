@@ -10,7 +10,7 @@ readiness: DEPLOYED
 protected_baseline:
   enabled: true
 release:
-  candidate: "v1.2.0"
+  candidate: "v2.0.0"
   gate: APPROVED_AND_DEPLOYED
   deployed_url: "https://noosadvisory.web.app"
 ci_cd:
@@ -23,6 +23,6 @@ cloud:
   status: DEPLOYED
 dashboard:
   status: SYNCED
-  last_sync: "2026-09-03T17:30:00-04:00"
+  last_sync: "2026-09-03T21:41:00-04:00"
 blocking_issues: []
 pending_approvals: []
