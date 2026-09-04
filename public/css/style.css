@@ -293,7 +293,7 @@ header {
    ========================================================================== */
 .hero {
   position: relative;
-  padding: clamp(80px, 11vw, 130px) 0 clamp(60px, 8vw, 90px);
+  padding: clamp(32px, 4vw, 48px) 0 clamp(50px, 6vw, 70px);
   overflow: hidden;
   background: radial-gradient(circle at 65% 30%, rgba(0, 168, 150, 0.04) 0%, rgba(24, 90, 219, 0.03) 35%, transparent 70%), #FFFFFF;
 }
